@@ -8,4 +8,8 @@ export default class Ship {
     this.hits++;
   }
 
+  isSunk() {
+    return this.hits >= this.length;
+  }
+
 }
