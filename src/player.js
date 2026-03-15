@@ -5,4 +5,8 @@ export default class Player {
   this.type = type;
   this.gameboard = new Gameboard();
 }
+
+attack(enemyBoard, x, y) {
+    return enemyBoard.receiveAttack(x, y);
+  }
 }
