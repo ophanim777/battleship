@@ -8,6 +8,11 @@ export default class Gameboard {
 
   placeShip(length, x, y){
      const ship = new Ship(length);
+     this.ships.push({
+      ship,
+      x,
+      y,
+    });
   }
 
 }
