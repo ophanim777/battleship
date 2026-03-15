@@ -25,4 +25,22 @@ computerBoard.addEventListener("click", (e) => {
     e.target.style.background = "gray";
   }
 
+
+
+  const cx = Math.floor(Math.random() * 10);
+  const cy = Math.floor(Math.random() * 10);
+
+  const computerResult = computer.attack(player.gameboard, cx, cy);
+
+  const playerCell = document.querySelector(
+    `#player-board [data-x="${cx}"][data-y="${cy}"]`
+  );
+
+  if (computerResult === "hit") {
+    playerCell.style.background = "red";
+  } else {
+    playerCell.style.background = "gray";
+  }
+
 });
+
