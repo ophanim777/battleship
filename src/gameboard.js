@@ -28,5 +28,7 @@ export default class Gameboard {
       return "miss";
     }
 }
-
+     allShipsSunk() {
+    return this.ships.every((s) => s.ship.isSunk());
+  }
 }
