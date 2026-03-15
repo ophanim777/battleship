@@ -5,4 +5,9 @@ export default class Gameboard {
     this.ships = [];
     this.missedAttacks = [];
   }
+
+  placeShip(length, x, y){
+     const ship = new Ship(length);
+  }
+
 }
