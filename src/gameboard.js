@@ -15,4 +15,10 @@ export default class Gameboard {
     });
   }
 
+   receiveAttack(x, y) {
+    const target = this.ships.find(
+      (s) => s.x === x && s.y === y
+    );
+}
+
 }
