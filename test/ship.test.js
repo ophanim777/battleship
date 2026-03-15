@@ -10,3 +10,10 @@ test("ship records hit", () => {
   ship.hit();
   expect(ship.hits).toBe(1);
 });
+
+test("ship sinks after enough hits", () => {
+  const ship = new Ship(2);
+  ship.hit();
+  ship.hit();
+  expect(ship.isSunk()).toBe(true);
+});
