@@ -13,3 +13,11 @@ test("attack hits ship", () => {
 
   expect(board.receiveAttack(1, 1)).toBe("hit");
 });
+
+test("attack miss recorded", () => {
+  const board = new Gameboard();
+
+  board.receiveAttack(2, 2);
+
+  expect(board.missedAttacks.length).toBe(1);
+});
