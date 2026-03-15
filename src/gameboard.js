@@ -19,6 +19,14 @@ export default class Gameboard {
     const target = this.ships.find(
       (s) => s.x === x && s.y === y
     );
+
+    if (target) {
+      target.ship.hit();
+      return "hit";
+    } else {
+      this.missedAttacks.push([x, y]);
+      return "miss";
+    }
 }
 
 }
